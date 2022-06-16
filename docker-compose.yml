@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  api:
+    build:
+      context: api
+      dockerfile: Dockerfile
+    volumes:
+      - ./api:/home/api
+    ports:
+      - 2000:2000
+  db:
+    image: postgres:14.3-alpine3.15
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=scoreboard
+    ports:
+      - 5432:5432
+    volumes:
+      - db:/var/lib/postgresql/data/
+
+volumes:
+  db:

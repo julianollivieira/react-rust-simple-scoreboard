@@ -1,0 +1,13 @@
+[package]
+name = "api"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+warp = "0.3.2"
+anyhow = "1.0.57"
+rustls = "0.20.6"
+tokio = { version = "1.19.2", features = ["full"] }
+sqlx = { version = "0.5", features = [ "runtime-tokio-rustls" , "postgres" ] }
