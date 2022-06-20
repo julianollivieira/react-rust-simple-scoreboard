@@ -9,7 +9,6 @@ const PlayerList = (): ReactElement => {
     <>
       <h3>List of players</h3>
       <div>
-        <p>players here</p>
         {players.map((player) => (
           <PlayerItem key={player.id} player={player} />
         ))}
