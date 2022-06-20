@@ -4,5 +4,6 @@ use serde::Deserialize;
 #[derive(Deserialize)]
 pub struct EnvConfig {
     pub api_port: u16,
+    pub app_url: String,
     pub database_url: String,
 }
